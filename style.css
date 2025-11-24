@@ -350,7 +350,7 @@ body {
 
 .social-link:hover {
     background: rgba(0, 150, 255, 0.2);
-    border-color: var(--rgb-purple);
+    border-color: var(--primary-blue);
     color: var(--text-white);
     transform: translateY(-3px);
 }

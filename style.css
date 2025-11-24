@@ -134,7 +134,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(187, 0, 255);
+    background: rgb(0, 0, 0); /* Pure Black Background */
     position: relative;
 }
 

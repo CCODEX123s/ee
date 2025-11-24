@@ -210,9 +210,23 @@ body {
     font-size: 36px;
     font-weight: 800;
     letter-spacing: 3px;
-    color: var(--rgb-purple);
-    text-shadow: 0 0 15px var(--primary-blue-glow);
+    color: rgb(0, 102, 255); /* Blue Text */
+    text-shadow: 0 0 10px rgba(0, 102, 255, 0.8),
+                 0 0 20px rgba(0, 102, 255, 0.6),
+                 0 0 40px rgba(0, 102, 255, 0.4);
     margin-bottom: 8px;
+    animation: blueWaveGlow 3s ease-in-out infinite;
+}
+@keyframes blueWaveGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 102, 255, 1), 0 0 20px rgba(0, 102, 255, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 25px rgba(0, 150, 255, 1), 0 0 50px rgba(0, 150, 255, 0.9);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 102, 255, 1), 0 0 20px rgba(0, 102, 255, 0.8);
+    }
 }
 
 .brand-tagline {

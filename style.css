@@ -153,6 +153,7 @@ body {
     backdrop-filter: blur(20px);
     position: relative;
     overflow: hidden;
+    border: 2px solid rgb(81, 0, 255); /* 🔥 Added border color */
 }
 
 /* 🔥 Animated Neon Border */

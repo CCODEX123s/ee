@@ -283,7 +283,6 @@ body {
 
 /* 🔥 Animated Button */
 .login-btn {
-.login-btn {
     padding: 18px;
     background: linear-gradient(90deg, var(--rgb-purple), var(--rgb-pink), var(--rgb-magenta));
     background-size: 300%;

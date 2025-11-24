@@ -330,9 +330,9 @@ body {
 .error-message {
     padding: 12px;
     background: rgba(122, 13, 255, 0.1);
-    border: 1px solid rgba(122, 13, 255, 0.3);
-    border-radius: 8px;
-    color: #ff4444;
+    border: 3px solid rgba(122, 13, 255, 0.3);
+    border-radius: 9px;
+    color: #05f3ff;
     text-align: center;
     font-size: 14px;
 }

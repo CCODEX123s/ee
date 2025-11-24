@@ -337,21 +337,23 @@ body {
 .social-link {
     width: 45px;
     height: 45px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #000; /* Pure Black */
+    border: 2px solid rgb(0, 68, 255); /* Neon Blue Border */
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-gray);
+    color: var(--text-white);
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
+/* Hover effect */
 .social-link:hover {
-    background: rgba(0, 150, 255, 0.2);
-    border-color: var(--primary-blue);
-    color: var(--text-white);
+    background: #000;  /* Stays black */
+    border-color: rgb(0, 68, 255);
+    color: rgb(0, 68, 255); /* Icon glow color */
+    box-shadow: 0 0 15px rgba(0, 68, 255, 0.6);
     transform: translateY(-3px);
 }
 

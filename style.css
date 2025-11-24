@@ -138,7 +138,6 @@ body {
     position: relative;
 }
 
-/* Login container box */
 .login-container {
     width: 100%;
     max-width: 480px;
@@ -148,15 +147,15 @@ body {
 }
 
 .login-box {
-    position: relative;
     background: var(--card-bg);
     border-radius: 20px;
     padding: 50px 40px;
     backdrop-filter: blur(20px);
+    position: relative;
     overflow: hidden;
 }
 
-/* Animated Neon Border */
+/* 🔥 Animated Neon Border */
 .login-box::before {
     content: "";
     position: absolute;
@@ -164,8 +163,7 @@ body {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(
-        45deg,
+    background: linear-gradient(45deg,
         var(--rgb-purple),
         var(--rgb-pink),
         var(--rgb-magenta),
@@ -177,27 +175,34 @@ body {
     animation: borderAnimation 6s linear infinite;
 }
 
-/* Glow Layer */
 .login-box::after {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     border-radius: 20px;
-    box-shadow: 0 0 40px rgba(183, 0, 255, 0.55);
+    box-shadow: 0 0 35px rgba(183, 0, 255, 0.55);
     z-index: -2;
 }
 
-/* Gradient animation keyframes */
 @keyframes borderAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Branding area */
 .brand-section {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.lightning-icon-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.lightning-icon {
+    font-size: 72px;
 }
 
 .brand-name {
@@ -205,7 +210,7 @@ body {
     font-weight: 800;
     letter-spacing: 3px;
     color: var(--rgb-purple);
-    text-shadow: 0 0 20px var(--primary-blue-glow);
+    text-shadow: 0 0 15px var(--primary-blue-glow);
     margin-bottom: 8px;
 }
 
@@ -216,7 +221,6 @@ body {
     letter-spacing: 2px;
 }
 
-/* Input styling */
 .login-form {
     display: flex;
     flex-direction: column;
@@ -235,13 +239,13 @@ body {
     border-radius: 12px;
     color: var(--text-white);
     font-size: 15px;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .login-input:focus {
     outline: none;
     border-color: var(--rgb-purple);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     box-shadow: 0 0 15px var(--primary-blue-glow);
 }
 
@@ -253,6 +257,7 @@ body {
     width: 22px;
     height: 22px;
     color: var(--text-gray);
+    z-index: 3;
     transition: color 0.3s ease;
 }
 
@@ -260,7 +265,7 @@ body {
     color: var(--rgb-purple);
 }
 
-/* Login Button */
+/* 🔥 Animated Button */
 .login-btn {
     padding: 18px;
     background: linear-gradient(90deg, var(--rgb-purple), var(--rgb-pink), var(--rgb-magenta));
@@ -271,29 +276,45 @@ body {
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     text-transform: uppercase;
-    transition: 0.3s ease;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
     animation: buttonGlow 5s linear infinite;
 }
 
 .login-btn:hover {
-    transform: translateY(-2px);
     box-shadow: 0 0 25px var(--primary-blue-glow);
+    transform: translateY(-2px);
 }
 
-/* Button animation */
+.login-btn:active {
+    transform: translateY(0);
+}
+
 @keyframes buttonGlow {
-    0% { background-position: 0% }
-    50% { background-position: 100% }
-    100% { background-position: 0% }
+    0% { background-position: 0%; }
+    50% { background-position: 100%; }
+    100% { background-position: 0%; }
 }
 
-/* Error */
+.shake {
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
 .error-message {
     padding: 12px;
-    background: rgba(255, 0, 0, 0.13);
-    border: 1px solid rgba(255, 0, 0, 0.4);
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
     border-radius: 8px;
     color: #ff4444;
     text-align: center;
@@ -302,6 +323,39 @@ body {
 
 .hidden {
     display: none !important;
+}
+
+.social-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: rgba(0, 150, 255, 0.2);
+    border-color: var(--rgb-purple);
+    color: var(--text-white);
+    transform: translateY(-3px);
+}
+
+.social-link svg {
+    width: 22px;
+    height: 22px;
 }
 /* ========== DASHBOARD ========== */
 .dashboard-body {

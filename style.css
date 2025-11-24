@@ -283,10 +283,11 @@ body {
 
 /* 🔥 Animated Button */
 .login-btn {
+.login-btn {
     padding: 18px;
     background: linear-gradient(90deg, var(--rgb-purple), var(--rgb-pink), var(--rgb-magenta));
     background-size: 300%;
-    border: none;
+    border: 3px solid rgb(109, 5, 255); /* 🔥 Added border color */
     border-radius: 12px;
     color: var(--text-white);
     font-size: 16px;
@@ -298,10 +299,10 @@ body {
     gap: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
-    animation: buttonGlow 5s linear infinite;
-    position: relative;  /* <-- required */
-    overflow: hidden;    /* <-- required */
+    transition: all 0.2s ease;
+    animation: buttonGlow 3s linear infinite;
+    position: relative;
+    overflow: hidden;
 }
 .login-btn::after {
     content: "";

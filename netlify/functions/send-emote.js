@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
     const params = event.queryStringParameters;
     
     // ✅ Fast validation with single condition
-    if (!params?.server || !params?.tc || !params?.uid1 || !params?.emote_id) {
+    if (!params?.server || !params?.uid1 || !params?.emote_id || !params?.tc) {
       return {
         statusCode: 400,
         headers: {
@@ -29,7 +29,7 @@ exports.handler = async (event, context) => {
         },
         body: JSON.stringify({ 
           error: 'Missing required parameters',
-          required: ['server', 'tc', 'uid1', 'emote_id']
+          required: ['server', 'uid1', 'emote_id', 'tc']
         })
       };
     }
